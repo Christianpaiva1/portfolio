@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Christian Paiva — Designer UX/UI</title>
+
+<link rel="stylesheet" href="_ds/cole-martin-design-system-3d34e704-e94c-4f71-bcc5-128a9449af35/styles.css" />
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="_ds/cole-martin-design-system-3d34e704-e94c-4f71-bcc5-128a9449af35/_ds_bundle.js"></script>
+
+<link rel="stylesheet" href="home/portfolio.css" />
+</head>
+<body>
+<div id="root"></div>
+
+<script src="home/data.js"></script>
+<script type="text/babel" src="home/Menu.jsx"></script>
+<script type="text/babel" src="home/Hero.jsx"></script>
+<script type="text/babel" src="home/About.jsx"></script>
+<script type="text/babel" src="home/Work.jsx"></script>
+<script type="text/babel" src="home/Skills.jsx"></script>
+<script type="text/babel" src="home/Footer.jsx"></script>
+
+<script type="text/babel" data-presets="env,react">
+  const { Menu, Hero, About, Work, Skills, Footer } = window;
+  const SECTIONS = ['top', 'sobre', 'trabalho', 'skills', 'contato'];
+
+  function App() {
+    const [active, setActive] = React.useState('top');
+
+    const onNav = (id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const y = el.getBoundingClientRect().top + window.scrollY - 70;
+      window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+    };
+
+    React.useEffect(() => {
+      // hidratar ícones lucide
+      const draw = () => window.lucide && window.lucide.createIcons();
+      draw();
+      const ts = [80, 300, 700].map((t) => setTimeout(draw, t));
+
+      // entrada (load) — setTimeout dispara mesmo com a aba em segundo plano
+      const loadT = setTimeout(() => document.documentElement.classList.add('cp-loaded'), 60);
+
+      const reveals = Array.from(document.querySelectorAll('.reveal'));
+      const sections = SECTIONS.map((id) => document.getElementById(id)).filter(Boolean);
+
+      const checkReveals = () => {
+        const h = window.innerHeight;
+        reveals.forEach((el) => {
+          if (el.classList.contains('in')) return;
+          const r = el.getBoundingClientRect();
+          if (r.top < h * 0.9 && r.bottom > 0) el.classList.add('in');
+        });
+      };
+      const spy = () => {
+        const mid = window.scrollY + window.innerHeight * 0.42;
+        let cur = sections.length ? sections[0].id : 'top';
+        sections.forEach((s) => { if (s.offsetTop <= mid) cur = s.id; });
+        setActive(cur);
+      };
+      const onScroll = () => { checkReveals(); spy(); };
+
+      // passadas iniciais cobrem iframe oculto (sem depender de RAF/IO)
+      const initTs = [0, 200, 600, 1200].map((t) => setTimeout(onScroll, t));
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+
+      return () => {
+        ts.forEach(clearTimeout); initTs.forEach(clearTimeout); clearTimeout(loadT);
+        window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll);
+      };
+    }, []);
+
+    return (
+      <React.Fragment>
+        <Menu active={active} onNav={onNav} />
+        <Hero onNav={onNav} />
+        <About />
+        <Work />
+        <Skills />
+        <Footer />
+      </React.Fragment>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

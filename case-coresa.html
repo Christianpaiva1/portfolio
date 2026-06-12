@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Coresa — Redesign de e-commerce · Christian Paiva</title>
+
+<link rel="stylesheet" href="_ds/cole-martin-design-system-3d34e704-e94c-4f71-bcc5-128a9449af35/styles.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" />
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<link rel="stylesheet" href="case/case.css" />
+</head>
+<body>
+
+<!-- ===== MENU ===== -->
+<header class="cx-menu" data-screen-label="Menu">
+  <a href="Portfolio v3.html" class="cx-brand">
+    <span class="mark">CP</span>
+    <span class="who">Christian Paiva</span>
+  </a>
+  <div class="cx-menu-center">Case · <b>Coresa</b></div>
+  <div class="cx-menu-right">
+    <a href="#contato" class="cx-btn">Vamos conversar <i data-lucide="arrow-up-right"></i></a>
+  </div>
+</header>
+
+<!-- ===== HERO / TÍTULO ===== -->
+<section class="cx-hero" id="top" data-screen-label="Título">
+  <div class="cx-hero-inner">
+    <div>
+      <span class="cx-eyebrow"><span class="ix">01</span><span class="dash"></span>Projeto · 2024</span>
+      <h1 class="cx-title">Coresa<span class="dot">.</span></h1>
+      <p class="cx-sub">Redesign de um e-commerce de cartuchos, toners e suprimentos de escritório — partindo da pesquisa para reorganizar o fluxo de compra.</p>
+    </div>
+    <div class="cx-meta">
+      <div class="row"><span class="k">Ano</span><span class="v">2024</span></div>
+      <div class="row"><span class="k">Tipo</span><span class="v">Redesign de e-commerce</span></div>
+      <div class="row"><span class="k">Cliente</span><span class="v">Coresa</span></div>
+      <div class="row"><span class="k">Ferramentas</span><span class="v">Figma</span></div>
+      <div class="row"><span class="k">Papel</span><span class="v">Pesquisa · UX/UI</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURE — HOME ===== -->
+<section class="cx-feature" data-screen-label="Destaque">
+  <div class="frame cx-reveal">
+    <figure class="cx-figure" data-full="assets/coresa-home.jpg" data-label="Home · Coresa redesenhada">
+      <div class="cx-shell"><div class="cx-browser">
+        <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">coresa.com.br</div><span></span></div>
+        <div class="body clip"><img src="assets/coresa-home.jpg" alt="Coresa — home redesenhada" /></div>
+      </div></div>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== 02 CONTEXTO ===== -->
+<section class="cx-row" data-screen-label="Contexto">
+  <div class="col-l cx-reveal">
+    <span class="cx-eyebrow"><span class="ix">02</span><span class="dash"></span>Contexto</span>
+    <h2>A jornada era o problema. Não o produto.</h2>
+  </div>
+  <div class="col-r cx-reveal" style="--d:80ms">
+    <p class="lead">A Coresa é uma loja online de <strong>cartuchos, toners e suprimentos de escritório</strong> para empresas e pessoas físicas.</p>
+    <p>O catálogo era forte e os preços competitivos. O que não funcionava era <strong>chegar até a compra</strong>: o fluxo era confuso, longo e sem retorno visual ao usuário.</p>
+    <p>O projeto começou ouvindo quem compra. Antes de redesenhar uma tela, foi preciso entender <strong>por que a jornada frustrava</strong>.</p>
+  </div>
+</section>
+
+<!-- ===== 03 PROBLEMA ===== -->
+<section class="cx-row" data-screen-label="Problema">
+  <div class="col-l cx-reveal">
+    <span class="cx-eyebrow"><span class="ix">03</span><span class="dash"></span>Problema</span>
+    <h2>Três pontos de fricção.</h2>
+  </div>
+  <div class="col-r cx-reveal" style="--d:80ms">
+    <ul class="cx-list">
+      <li>O fluxo de compra exigia <strong>navegar entre várias páginas</strong> para concluir carrinho, frete e pagamento. Muita fricção para uma ação simples.</li>
+      <li>A interface não tinha <strong>hierarquia visual</strong> definida. Tudo competia pela atenção, e o resultado era ruído.</li>
+      <li>Ações como editar, excluir ou finalizar pedidos <strong>não davam retorno visual</strong>. O usuário não sabia se tinha funcionado.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 04 OBJETIVOS ===== -->
+<section class="cx-row" data-screen-label="Objetivos">
+  <div class="col-l cx-reveal">
+    <span class="cx-eyebrow"><span class="ix">04</span><span class="dash"></span>Objetivos</span>
+    <h2>Reduzir cliques. Aumentar clareza.</h2>
+  </div>
+  <div class="col-r cx-reveal" style="--d:80ms">
+    <ul class="cx-list">
+      <li><strong>Reestruturar o fluxo de compra</strong> para reduzir etapas e cliques desnecessários.</li>
+      <li>Criar <strong>hierarquia visual clara</strong> e padronizar componentes para uma navegação coerente.</li>
+      <li>Otimizar <strong>Perfil</strong> e <strong>Meus Pedidos</strong> para facilitar o acesso à informação.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 05 SISTEMA DE DESIGN ===== -->
+<section class="cx-stage paper" data-screen-label="Sistema de design">
+  <div class="head cx-reveal">
+    <h3>Sistema de design. <span class="dim">Uma base antes das telas.</span></h3>
+    <span class="lab">[05] Style guide</span>
+  </div>
+  <div class="cx-ds cx-reveal" style="--d:80ms">
+    <div class="panel">
+      <p class="ds-lab">// Paleta da marca</p>
+      <div class="cx-swatches">
+        <div class="sw" style="background:#00749B"><span>00749B</span></div>
+        <div class="sw" style="background:#005D7C"><span>005D7C</span></div>
+        <div class="sw" style="background:#00465D"><span>00465D</span></div>
+        <div class="sw" style="background:#002936"><span>002936</span></div>
+        <div class="sw dark-txt" style="background:#B0D4E0"><span>B0D4E0</span></div>
+        <div class="sw dark-txt" style="background:#E6F1F5"><span>E6F1F5</span></div>
+      </div>
+      <div class="cx-sw-label"><b>Azul institucional</b><span>primário · confiança</span></div>
+      <div class="cx-swatches">
+        <div class="sw dark-txt" style="background:#FEC52F"><span>FEC52F</span></div>
+        <div class="sw dark-txt" style="background:#E5B12A"><span>E5B12A</span></div>
+        <div class="sw" style="background:#CB9E26"><span>CB9E26</span></div>
+        <div class="sw" style="background:#98761C"><span>98761C</span></div>
+        <div class="sw dark-txt" style="background:#FFEDBF"><span>FFEDBF</span></div>
+        <div class="sw dark-txt" style="background:#FFF9EA"><span>FFF9EA</span></div>
+      </div>
+      <div class="cx-sw-label"><b>Amarelo de apoio</b><span>destaque · ofertas</span></div>
+      <div class="cx-swatches">
+        <div class="sw" style="background:#393939"><span>393939</span></div>
+        <div class="sw" style="background:#2E2E2E"><span>2E2E2E</span></div>
+        <div class="sw" style="background:#1A1A1A"><span>1A1A1A</span></div>
+        <div class="sw dark-txt" style="background:#C2C2C2"><span>C2C2C2</span></div>
+        <div class="sw dark-txt" style="background:#EAEAEA"><span>EAEAEA</span></div>
+      </div>
+      <div class="cx-sw-label" style="margin-bottom:0"><b>Escala de cinza</b><span>texto · estrutura</span></div>
+    </div>
+    <div class="panel">
+      <p class="ds-lab">// Tipografia</p>
+      <div class="cx-fontchip">
+        <span class="aa" style="font-family:'Source Sans 3',sans-serif; color:#00749B">Aa</span>
+        <span class="fc"><b>Source Sans 3</b>Família única · pesos 400–700</span>
+      </div>
+      <div class="cx-type"><span class="sample" style="font-family:'Source Sans 3',sans-serif; font-size:40px; font-weight:700">Heading</span><span class="m">700 · Bold</span></div>
+      <div class="cx-type"><span class="sample" style="font-family:'Source Sans 3',sans-serif; font-size:28px; font-weight:600">Subtítulo</span><span class="m">600 · Semibold</span></div>
+      <div class="cx-type"><span class="sample" style="font-family:'Source Sans 3',sans-serif; font-size:18px; font-weight:400">Corpo de texto 18 · 16</span><span class="m">400 · Regular</span></div>
+      <div class="cx-type"><span class="sample" style="font-family:'Source Sans 3',sans-serif; font-size:14px; font-weight:400">Apoio 14 · 12</span><span class="m">400 · Regular</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 SOLUÇÕES ===== -->
+<section class="cx-row" data-screen-label="Soluções">
+  <div class="col-l cx-reveal">
+    <span class="cx-eyebrow"><span class="ix">06</span><span class="dash"></span>Soluções de interface</span>
+    <h2>Seis decisões guiaram o redesign.</h2>
+  </div>
+  <div class="col-r cx-reveal" style="--d:80ms">
+    <ul class="cx-list">
+      <li><strong>Navegação simplificada.</strong> Nova home com ofertas, mais vendidos e busca em destaque. Decisão de compra facilitada nos primeiros cliques.</li>
+      <li><strong>Página do produto redesenhada.</strong> Imagem, preço, variações e ação de compra com hierarquia clara.</li>
+      <li><strong>Carrinho otimizado.</strong> Quantidade, frete e entrega gerenciados na mesma tela.</li>
+      <li><strong>Checkout simplificado.</strong> Endereço, resumo e pagamento em uma única tela.</li>
+      <li><strong>Gerenciamento de dados.</strong> Telas diretas para perfil, favoritos e pedidos.</li>
+      <li><strong>Acompanhamento de pedidos.</strong> Status de cada pedido com tags visíveis, sem ambiguidade.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 07 HOME ===== -->
+<section class="cx-stage paper" data-screen-label="Tela — Home">
+  <div class="head cx-reveal">
+    <h3>Home. <span class="dim">Decisão de compra nos primeiros cliques.</span></h3>
+    <span class="lab">[07] Tela · Home</span>
+  </div>
+  <div class="inner narrow cx-reveal" style="--d:80ms">
+    <figure class="cx-figure" data-full="assets/coresa-home.jpg" data-label="Home · Coresa">
+      <div class="cx-shell"><div class="cx-browser">
+        <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">coresa.com.br</div><span></span></div>
+        <div class="body clip"><img src="assets/coresa-home.jpg" alt="Home — Coresa" /></div>
+      </div></div>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== 08 CATÁLOGO & FAVORITOS ===== -->
+<section class="cx-stage wash" data-screen-label="Telas — Catálogo">
+  <div class="head cx-reveal">
+    <h3>Catálogo e favoritos. <span class="dim">Encontrar e voltar com facilidade.</span></h3>
+    <span class="lab">[08] Listagem &amp; Favoritos</span>
+  </div>
+  <div class="inner cx-reveal" style="--d:80ms">
+    <div class="cx-twoup">
+      <div class="cx-cell">
+        <figure class="cx-figure" data-full="assets/coresa-listing.jpg" data-label="Listagem · Cartuchos & Toners">
+          <div class="cx-shell"><div class="cx-browser">
+            <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">coresa.com.br/toner</div><span></span></div>
+            <div class="body clip"><img src="assets/coresa-listing.jpg" alt="Listagem — Cartuchos & Toners" /></div>
+          </div></div>
+        </figure>
+      </div>
+      <div class="cx-cell">
+        <figure class="cx-figure" data-full="assets/coresa-favorites.jpg" data-label="Favoritos">
+          <div class="cx-shell"><div class="cx-browser">
+            <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">coresa.com.br/conta/favoritos</div><span></span></div>
+            <div class="body clip"><img src="assets/coresa-favorites.jpg" alt="Favoritos — Coresa" /></div>
+          </div></div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 09 PRODUTO ===== -->
+<section class="cx-stage paper" data-screen-label="Tela — Produto">
+  <div class="head cx-reveal">
+    <h3>Produto. <span class="dim">Tudo que importa na primeira dobra.</span></h3>
+    <span class="lab">[09] Tela · Produto</span>
+  </div>
+  <div class="inner narrow cx-reveal" style="--d:80ms">
+    <figure class="cx-figure" data-full="assets/coresa-product.jpg" data-label="Página de produto">
+      <div class="cx-shell"><div class="cx-browser">
+        <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">coresa.com.br/produto</div><span></span></div>
+        <div class="body clip"><img src="assets/coresa-product.jpg" alt="Produto — Coresa" /></div>
+      </div></div>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== 10 CARRINHO & CHECKOUT ===== -->
+<section class="cx-stage paper" data-screen-label="Fluxo — Compra">
+  <div class="head cx-reveal">
+    <h3>Carrinho e checkout. <span class="dim">Da sacola ao pagamento, sem desvios.</span></h3>
+    <span class="lab">[10] Fluxo · Compra</span>
+  </div>
+  <div class="inner cx-reveal" style="--d:80ms">
+    <div class="cx-twoup">
+      <div class="cx-cell">
+        <figure class="cx-figure" data-full="assets/coresa-cart.jpg" data-label="Carrinho">
+          <div class="cx-shell"><div class="cx-browser">
+            <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">coresa.com.br/carrinho</div><span></span></div>
+            <div class="body clip"><img src="assets/coresa-cart.jpg" alt="Carrinho — Coresa" /></div>
+          </div></div>
+        </figure>
+      </div>
+      <div class="cx-cell">
+        <figure class="cx-figure" data-full="assets/coresa-checkout.jpg" data-label="Checkout">
+          <div class="cx-shell"><div class="cx-browser">
+            <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">coresa.com.br/checkout</div><span></span></div>
+            <div class="body clip"><img src="assets/coresa-checkout.jpg" alt="Checkout — Coresa" /></div>
+          </div></div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11 ÁREA LOGADA ===== -->
+<section class="cx-stage paper" data-screen-label="Área logada">
+  <div class="head cx-reveal">
+    <h3>Área logada. <span class="dim">Pedidos com status, perfil sem barreira.</span></h3>
+    <span class="lab">[11] Telas · Conta</span>
+  </div>
+  <div class="inner cx-reveal" style="--d:80ms">
+    <div class="cx-twoup">
+      <div class="cx-cell">
+        <figure class="cx-figure" data-full="assets/coresa-orders.jpg" data-label="Meus pedidos">
+          <div class="cx-shell"><div class="cx-browser">
+            <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">coresa.com.br/conta/pedidos</div><span></span></div>
+            <div class="body clip"><img src="assets/coresa-orders.jpg" alt="Meus pedidos — Coresa" /></div>
+          </div></div>
+        </figure>
+      </div>
+      <div class="cx-cell">
+        <figure class="cx-figure" data-full="assets/coresa-profile.jpg" data-label="Editar perfil">
+          <div class="cx-shell"><div class="cx-browser">
+            <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">coresa.com.br/conta/perfil</div><span></span></div>
+            <div class="body clip"><img src="assets/coresa-profile.jpg" alt="Editar perfil — Coresa" /></div>
+          </div></div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 12 ACESSO (inversão) ===== -->
+<section class="cx-stage invert" data-screen-label="Acesso">
+  <div class="head cx-reveal">
+    <h3>Entrada na loja. <span class="dim">Login e cadastro sem fricção.</span></h3>
+    <span class="lab">[12] Telas · Acesso</span>
+  </div>
+  <div class="inner cx-reveal" style="--d:80ms">
+    <div class="cx-twoup">
+      <div class="cx-cell">
+        <figure class="cx-figure" data-full="assets/coresa-login.jpg" data-label="Login">
+          <div class="cx-shell"><div class="cx-browser">
+            <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">coresa.com.br/login</div><span></span></div>
+            <div class="body clip"><img src="assets/coresa-login.jpg" alt="Login — Coresa" /></div>
+          </div></div>
+        </figure>
+      </div>
+      <div class="cx-cell">
+        <figure class="cx-figure" data-full="assets/coresa-signup.jpg" data-label="Criar conta">
+          <div class="cx-shell"><div class="cx-browser">
+            <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">coresa.com.br/cadastro</div><span></span></div>
+            <div class="body clip"><img src="assets/coresa-signup.jpg" alt="Criar conta — Coresa" /></div>
+          </div></div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 13 ATENDIMENTO ===== -->
+<section class="cx-stage paper" data-screen-label="Tela — Atendimento">
+  <div class="head cx-reveal">
+    <h3>Atendimento. <span class="dim">Resposta antes da dúvida virar problema.</span></h3>
+    <span class="lab">[13] Tela · Suporte</span>
+  </div>
+  <div class="inner narrow cx-reveal" style="--d:80ms">
+    <figure class="cx-figure" data-full="assets/coresa-support.jpg" data-label="Atendimento">
+      <div class="cx-shell"><div class="cx-browser">
+        <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">coresa.com.br/atendimento</div><span></span></div>
+        <div class="body clip"><img src="assets/coresa-support.jpg" alt="Atendimento — Coresa" /></div>
+      </div></div>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== 14 IMPACTO ===== -->
+<section class="cx-row" data-screen-label="Impacto">
+  <div class="col-l cx-reveal">
+    <span class="cx-eyebrow"><span class="ix">14</span><span class="dash"></span>Impacto esperado</span>
+    <h2>O que muda para quem compra.</h2>
+  </div>
+  <div class="col-r cx-reveal" style="--d:80ms">
+    <p class="lead">As decisões foram baseadas em <strong>dados reais de pesquisa</strong>, não em achismo.</p>
+    <ul class="cx-list arrow">
+      <li>Fluxos <strong>mais curtos e diretos</strong>, com menos páginas entre o produto e a compra.</li>
+      <li>Experiência <strong>mais autônoma</strong>, em que o usuário entende e controla cada etapa.</li>
+      <li>Interface <strong>mais clara</strong> para escolha de produto e acompanhamento de pedido.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 15 APRENDIZADO ===== -->
+<section class="cx-row" data-screen-label="Aprendizado">
+  <div class="col-l cx-reveal">
+    <span class="cx-eyebrow"><span class="ix">15</span><span class="dash"></span>Aprendizado</span>
+    <h2>Menos achismo. Mais intenção.</h2>
+  </div>
+  <div class="col-r cx-reveal" style="--d:80ms">
+    <p>Mesmo sem testes ao longo do processo, todas as decisões foram baseadas em <strong>dados reais de pesquisa</strong>. Isso manteve o foco nas necessidades de quem usa.</p>
+    <p>A pesquisa mostrou caminhos que eu não tinha considerado e <strong>mudou como penso navegação</strong> e escolha de funcionalidades. Pesquisa entrega o que a intuição não consegue: razão para cada decisão.</p>
+  </div>
+</section>
+
+<!-- ===== NEXT CASE ===== -->
+<nav class="cx-next" data-screen-label="Próximo">
+  <a class="back" href="Portfolio v3.html#trabalho">← Voltar ao portfólio</a>
+  <a class="next" href="case-carneiro.html">
+    <span class="lab">Próximo case · 02 / 03</span>
+    <span class="nm">Carneiro &amp; Carballido <i data-lucide="arrow-up-right" style="width:0.6em;height:0.6em"></i></span>
+  </a>
+</nav>
+
+<!-- ===== FOOTER / CONTATO ===== -->
+<footer class="cx-foot" id="contato" data-screen-label="Contato">
+  <div class="cx-foot-inner">
+    <span class="cx-eyebrow eyebrow-inv"><span class="dash"></span>Contato</span>
+    <h2>Quer melhorar seu produto<span class="dot">?</span></h2>
+    <div class="cx-foot-status"><span class="pill"><span class="pdot"></span><span class="br">[</span>Aberto para oportunidades<span class="br">]</span></span></div>
+    <div class="cx-foot-cta">
+      <a class="cx-btn invert-light" href="/cdn-cgi/l/email-protection#4b28233922383f222a253b2a223d2a7a7a0b2c262a222765282426">Vamos conversar <i data-lucide="arrow-up-right"></i></a>
+      <a class="cx-btn glass" href="https://www.linkedin.com/in/christiantpaiva/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="cx-btn link-light" href="assets/christian-paiva-cv.pdf" target="_blank" rel="noopener">Currículo <i data-lucide="arrow-down-to-line"></i></a>
+    </div>
+    <div class="cx-foot-div"></div>
+    <div class="cx-foot-row">
+      <div class="links">
+        <a href="/cdn-cgi/l/email-protection#adcec5dfc4ded9c4ccc3ddccc4dbcc9c9cedcac0ccc4c183cec2c0"><i data-lucide="mail" style="width:14px;height:14px"></i><span class="__cf_email__" data-cfemail="c4a7acb6adb7b0ada5aab4a5adb2a5f5f584a3a9a5ada8eaa7aba9">[email&#160;protected]</span></a>
+        <a href="https://www.linkedin.com/in/christiantpaiva/" target="_blank" rel="noopener"><i data-lucide="linkedin" style="width:14px;height:14px"></i>LinkedIn</a>
+      </div>
+      <div>© 2026 Christian Paiva · <span id="cx-date" style="opacity:0.7">—</span></div>
+    </div>
+  </div>
+  <div class="cx-foot-bigname" aria-hidden="true">Christian Paiva</div>
+</footer>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="cx-lb" id="cx-lb">
+  <div class="meta" id="cx-lb-meta"></div>
+  <button class="close" id="cx-lb-close" aria-label="Fechar">✕</button>
+  <img id="cx-lb-img" alt="" />
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // ícones
+  function drawIcons(){ window.lucide && window.lucide.createIcons(); }
+  drawIcons(); [60,300,800].forEach(t=>setTimeout(drawIcons,t));
+
+  // data
+  (function(){
+    var d=new Date();
+    var wd=['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado'][d.getDay()];
+    var p=function(n){return String(n).padStart(2,'0');};
+    var el=document.getElementById('cx-date');
+    if(el) el.textContent = wd+', '+p(d.getDate())+'/'+p(d.getMonth()+1)+'/'+d.getFullYear();
+  })();
+
+  // reveal — visível por padrão, esconde só com .cx-animate (aba pintando)
+  (function(){
+    var prefersReduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduce) return;
+    setTimeout(function(){
+      document.documentElement.classList.add('cx-animate');
+      var els = Array.prototype.slice.call(document.querySelectorAll('.cx-reveal'));
+      var pass = function(){
+        var h = window.innerHeight;
+        els.forEach(function(el){
+          if (el.classList.contains('in')) return;
+          var r = el.getBoundingClientRect();
+          if (r.top < h*0.92 && r.bottom > 0) el.classList.add('in');
+        });
+      };
+      [0,200,600].forEach(function(t){ setTimeout(pass,t); });
+      window.addEventListener('scroll', pass, {passive:true});
+      window.addEventListener('resize', pass);
+    }, 60);
+  })();
+
+  // lightbox
+  (function(){
+    var lb=document.getElementById('cx-lb'), img=document.getElementById('cx-lb-img'), meta=document.getElementById('cx-lb-meta');
+    function open(src,label){ img.src=src; meta.textContent=label||''; lb.classList.add('on'); document.body.style.overflow='hidden'; }
+    function close(){ lb.classList.remove('on'); document.body.style.overflow=''; img.src=''; }
+    document.querySelectorAll('.cx-figure').forEach(function(fig){
+      fig.addEventListener('click', function(){ open(fig.getAttribute('data-full'), fig.getAttribute('data-label')); });
+    });
+    document.getElementById('cx-lb-close').addEventListener('click', function(e){ e.stopPropagation(); close(); });
+    lb.addEventListener('click', close);
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+  })();
+</script>
+</body>
+</html>

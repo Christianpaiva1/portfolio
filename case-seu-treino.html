@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Seu Treino — Rede social de treinos · Christian Paiva</title>
+
+<link rel="stylesheet" href="_ds/cole-martin-design-system-3d34e704-e94c-4f71-bcc5-128a9449af35/styles.css" />
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<link rel="stylesheet" href="case/case.css" />
+</head>
+<body>
+
+<!-- ===== MENU ===== -->
+<header class="cx-menu" data-screen-label="Menu">
+  <a href="Portfolio v3.html" class="cx-brand">
+    <span class="mark">CP</span>
+    <span class="who">Christian Paiva</span>
+  </a>
+  <div class="cx-menu-center">Case · <b>Seu Treino</b></div>
+  <div class="cx-menu-right">
+    <a href="#contato" class="cx-btn">Vamos conversar <i data-lucide="arrow-up-right"></i></a>
+  </div>
+</header>
+
+<!-- ===== HERO / TÍTULO ===== -->
+<section class="cx-hero" id="top" data-screen-label="Título">
+  <div class="cx-hero-inner">
+    <div>
+      <span class="cx-eyebrow"><span class="ix">01</span><span class="dash"></span>Projeto · 2025</span>
+      <h1 class="cx-title">Seu<br>Treino<span class="dot">.</span></h1>
+      <p class="cx-sub">Design de uma rede social de treinos — perfil, feed e interação entre alunos, numa interface dark voltada para academia.</p>
+    </div>
+    <div class="cx-meta">
+      <div class="row"><span class="k">Ano</span><span class="v">2025</span></div>
+      <div class="row"><span class="k">Tipo</span><span class="v">Rede social · Web app</span></div>
+      <div class="row"><span class="k">Cliente</span><span class="v">Seu Treino</span></div>
+      <div class="row"><span class="k">Ferramentas</span><span class="v">Figma</span></div>
+      <div class="row"><span class="k">Papel</span><span class="v">UI Design</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURE — FEED ===== -->
+<section class="cx-feature" data-screen-label="Destaque">
+  <div class="frame cx-reveal">
+    <figure class="cx-figure" data-full="assets/st-feedadmin.jpg" data-label="Feed · Seu Treino">
+      <div class="cx-shell"><div class="cx-browser">
+        <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">seutreino.com.br/feed</div><span></span></div>
+        <div class="body clip"><img src="assets/st-feedadmin.jpg" alt="Seu Treino — feed" /></div>
+      </div></div>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== 02 CONTEXTO ===== -->
+<section class="cx-row" data-screen-label="Contexto">
+  <div class="col-l cx-reveal">
+    <span class="cx-eyebrow"><span class="ix">02</span><span class="dash"></span>Contexto</span>
+    <h2>Treinos em rede, num só lugar.</h2>
+  </div>
+  <div class="col-r cx-reveal" style="--d:80ms">
+    <p class="lead">O cliente precisava de uma plataforma onde alunos pudessem <strong>publicar e acessar treinos</strong> em um só lugar.</p>
+    <p>A ideia era algo próximo de uma <strong>rede social</strong>: cada aluno com perfil próprio, feed de publicações e interação entre usuários — só que com foco em fitness.</p>
+    <p>A direção visual veio da própria marca: <strong>fundo preto, amarelo dourado de destaque</strong> e energia de academia em cada tela.</p>
+  </div>
+</section>
+
+<!-- ===== 03 DESAFIOS ===== -->
+<section class="cx-row" data-screen-label="Desafios">
+  <div class="col-l cx-reveal">
+    <span class="cx-eyebrow"><span class="ix">03</span><span class="dash"></span>Desafios</span>
+    <h2>Três frentes para resolver.</h2>
+  </div>
+  <div class="col-r cx-reveal" style="--d:80ms">
+    <ul class="cx-list">
+      <li>Organizar o conteúdo em um <strong>perfil único e funcional</strong>, com feed e tópicos.</li>
+      <li>Criar <strong>fluxos claros</strong> para edição de perfil, dados e treinos.</li>
+      <li>Estruturar a <strong>interação entre alunos</strong> de forma natural — seguir, curtir, comentar.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 04 DECISÕES DE UI ===== -->
+<section class="cx-row" data-screen-label="Decisões de UI">
+  <div class="col-l cx-reveal">
+    <span class="cx-eyebrow"><span class="ix">04</span><span class="dash"></span>Decisões de UI</span>
+    <h2>Profundidade no escuro.</h2>
+  </div>
+  <div class="col-r cx-reveal" style="--d:80ms">
+    <ul class="cx-list">
+      <li><strong>Conteúdo e categorias fixos no topo</strong>, para acesso imediato à navegação.</li>
+      <li><strong>Sombra e camadas de fundo</strong> para criar profundidade e hierarquia num tema dark.</li>
+      <li>Navegação <strong>clara e previsível</strong> em todas as telas — mesmo gesto, mesma resposta.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 05 SISTEMA DE DESIGN (inversão) ===== -->
+<section class="cx-stage invert" data-screen-label="Sistema de design">
+  <div class="head cx-reveal">
+    <h3>Sistema de design. <span class="dim">Preto, dourado e energia.</span></h3>
+    <span class="lab">[05] Style guide</span>
+  </div>
+  <div class="cx-ds cx-reveal" style="--d:80ms">
+    <div class="panel">
+      <p class="ds-lab">// Paleta da marca</p>
+      <div class="cx-swatches">
+        <div class="sw dark-txt" style="background:#F5C518"><span>F5C518</span></div>
+        <div class="sw dark-txt" style="background:#F8D86B"><span>F8D86B</span></div>
+        <div class="sw dark-txt" style="background:#FBE9A8"><span>FBE9A8</span></div>
+        <div class="sw" style="background:#D9A800"><span>D9A800</span></div>
+      </div>
+      <div class="cx-sw-label"><b>Dourado</b><span>destaque · ações · marca</span></div>
+      <div class="cx-swatches">
+        <div class="sw" style="background:#0B0B0C"><span>0B0B0C</span></div>
+        <div class="sw" style="background:#161617"><span>161617</span></div>
+        <div class="sw" style="background:#232325"><span>232325</span></div>
+        <div class="sw" style="background:#343437"><span>343437</span></div>
+      </div>
+      <div class="cx-sw-label"><b>Pretos &amp; superfícies</b><span>fundo · cards · camadas</span></div>
+      <div class="cx-swatches">
+        <div class="sw dark-txt" style="background:#FFFFFF"><span>FFFFFF</span></div>
+        <div class="sw dark-txt" style="background:#B6B6B8"><span>B6B6B8</span></div>
+        <div class="sw" style="background:#6E6E72"><span>6E6E72</span></div>
+        <div class="sw" style="background:#3A3A3D"><span>3A3A3D</span></div>
+      </div>
+      <div class="cx-sw-label" style="margin-bottom:0"><b>Texto &amp; neutros</b><span>títulos · corpo · legendas</span></div>
+    </div>
+    <div class="panel">
+      <p class="ds-lab">// Tipografia</p>
+      <div class="cx-fontchip">
+        <span class="aa" style="font-style:italic; color:#F5C518">Aa</span>
+        <span class="fc"><b>Sans-serif · itálico bold</b>Logotipo em itálico · UI em regular</span>
+      </div>
+      <div class="cx-type"><span class="sample" style="font-style:italic; font-weight:700; font-size:32px">SEU TREINO</span><span class="m">Logo · Italic 700</span></div>
+      <div class="cx-type"><span class="sample" style="font-size:30px; font-weight:600">Headline 32</span><span class="m">600 · Semibold</span></div>
+      <div class="cx-type"><span class="sample" style="font-size:22px; font-weight:600">Título 22</span><span class="m">600 · Semibold</span></div>
+      <div class="cx-type"><span class="sample" style="font-size:17px; font-weight:500">Nome / label 16</span><span class="m">500 · Medium</span></div>
+      <div class="cx-type"><span class="sample" style="font-size:14px; font-weight:400; opacity:0.7">Corpo de texto 14</span><span class="m">400 · Regular</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 LOGIN ===== -->
+<section class="cx-stage paper" data-screen-label="Tela — Login">
+  <div class="head cx-reveal">
+    <h3>Login. <span class="dim">A primeira impressão da marca.</span></h3>
+    <span class="lab">[06] Tela · Login</span>
+  </div>
+  <div class="inner narrow cx-reveal" style="--d:80ms">
+    <figure class="cx-figure" data-full="assets/st-login.jpg" data-label="Login · Seu Treino">
+      <div class="cx-shell"><div class="cx-browser">
+        <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">seutreino.com.br/login</div><span></span></div>
+        <div class="body"><img src="assets/st-login.jpg" alt="Login — Seu Treino" /></div>
+      </div></div>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== 07 FEED (two-up tall) ===== -->
+<section class="cx-stage wash" data-screen-label="Feed — visões">
+  <div class="head cx-reveal">
+    <h3>Feed. <span class="dim">Duas visões da mesma comunidade.</span></h3>
+    <span class="lab">[07] Telas · Feed</span>
+  </div>
+  <div class="inner cx-reveal" style="--d:80ms">
+    <div class="cx-twoup tall">
+      <figure class="cx-figure" data-full="assets/st-feedadmin.jpg" data-label="Feed · Admin">
+        <div class="cx-shell"><div class="cx-browser">
+          <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">seutreino.com.br/feed · admin</div><span></span></div>
+          <div class="body clip"><img src="assets/st-feedadmin.jpg" alt="Feed admin — Seu Treino" /></div>
+        </div></div>
+      </figure>
+      <figure class="cx-figure" data-full="assets/st-feed.jpg" data-label="Feed · Usuário">
+        <div class="cx-shell"><div class="cx-browser">
+          <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">seutreino.com.br/feed · usuário</div><span></span></div>
+          <div class="body clip"><img src="assets/st-feed.jpg" alt="Feed usuário — Seu Treino" /></div>
+        </div></div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 08 SEGUIDORES ===== -->
+<section class="cx-stage paper" data-screen-label="Tela — Seguidores">
+  <div class="head cx-reveal">
+    <h3>Seguidores. <span class="dim">A comunidade em grid.</span></h3>
+    <span class="lab">[08] Tela · Seguidores</span>
+  </div>
+  <div class="inner narrow cx-reveal" style="--d:80ms">
+    <figure class="cx-figure" data-full="assets/st-followers.jpg" data-label="Seguidores · Seu Treino">
+      <div class="cx-shell"><div class="cx-browser">
+        <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">seutreino.com.br/seguidores</div><span></span></div>
+        <div class="body clip"><img src="assets/st-followers.jpg" alt="Seguidores — Seu Treino" /></div>
+      </div></div>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== 09 CONFIGURAÇÕES (two-up) ===== -->
+<section class="cx-stage paper" data-screen-label="Configurações">
+  <div class="head cx-reveal">
+    <h3>Configurações da conta. <span class="dim">Três abas, um padrão.</span></h3>
+    <span class="lab">[09] Telas · Conta</span>
+  </div>
+  <div class="inner cx-reveal" style="--d:80ms">
+    <div class="cx-twoup">
+      <figure class="cx-figure" data-full="assets/st-personal.jpg" data-label="Informações pessoais">
+        <div class="cx-shell"><div class="cx-browser">
+          <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">seutreino.com.br/conta/informacoes</div><span></span></div>
+          <div class="body clip"><img src="assets/st-personal.jpg" alt="Informações pessoais — Seu Treino" /></div>
+        </div></div>
+      </figure>
+      <figure class="cx-figure" data-full="assets/st-password.jpg" data-label="Trocar senha">
+        <div class="cx-shell"><div class="cx-browser">
+          <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">seutreino.com.br/conta/senha</div><span></span></div>
+          <div class="body clip"><img src="assets/st-password.jpg" alt="Trocar senha — Seu Treino" /></div>
+        </div></div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10 PERFIL ===== -->
+<section class="cx-stage wash" data-screen-label="Tela — Perfil">
+  <div class="head cx-reveal">
+    <h3>Perfil. <span class="dim">Identidade que o aluno controla.</span></h3>
+    <span class="lab">[10] Tela · Perfil</span>
+  </div>
+  <div class="inner narrow cx-reveal" style="--d:80ms">
+    <figure class="cx-figure" data-full="assets/st-profile.jpg" data-label="Perfil · Seu Treino">
+      <div class="cx-shell"><div class="cx-browser">
+        <div class="chrome"><div class="dots"><span></span><span></span><span></span></div><div class="url">seutreino.com.br/conta/perfil</div><span></span></div>
+        <div class="body clip"><img src="assets/st-profile.jpg" alt="Perfil — Seu Treino" /></div>
+      </div></div>
+    </figure>
+  </div>
+</section>
+
+<!-- ===== 11 IMPACTO ===== -->
+<section class="cx-row" data-screen-label="Impacto">
+  <div class="col-l cx-reveal">
+    <span class="cx-eyebrow"><span class="ix">11</span><span class="dash"></span>Impacto esperado</span>
+    <h2>O que muda para o aluno.</h2>
+  </div>
+  <div class="col-r cx-reveal" style="--d:80ms">
+    <p class="lead">Uma plataforma onde treinar também é <strong>pertencer a uma comunidade</strong>.</p>
+    <ul class="cx-list arrow">
+      <li>Um perfil <strong>funcional</strong>, que reúne treinos e identidade num só lugar.</li>
+      <li>Fluxos <strong>claros</strong> para editar dados, senha e foto sem fricção.</li>
+      <li>Interação entre alunos que <strong>acontece naturalmente</strong> — seguir, curtir, comentar.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 12 APRENDIZADO ===== -->
+<section class="cx-row" data-screen-label="Aprendizado">
+  <div class="col-l cx-reveal">
+    <span class="cx-eyebrow"><span class="ix">12</span><span class="dash"></span>Aprendizado</span>
+    <h2>Sistema antes da tela.</h2>
+  </div>
+  <div class="col-r cx-reveal" style="--d:80ms">
+    <p>Projetar uma rede social — mesmo pequena — exige <strong>pensar em sistema antes de desenhar telas</strong>. Cada decisão de UI se multiplica em todos os pontos da interface.</p>
+    <p>Padronizar <strong>profundidade, hierarquia e navegação</strong> num tema dark foi o que sustentou a coerência do produto. No escuro, a luz certa no lugar certo é o que guia o olho.</p>
+  </div>
+</section>
+
+<!-- ===== NEXT CASE ===== -->
+<nav class="cx-next" data-screen-label="Próximo">
+  <a class="back" href="Portfolio v3.html#trabalho">← Voltar ao portfólio</a>
+  <a class="next" href="case-coresa.html">
+    <span class="lab">Primeiro case · 01 / 03</span>
+    <span class="nm">Coresa <i data-lucide="arrow-up-right" style="width:0.6em;height:0.6em"></i></span>
+  </a>
+</nav>
+
+<!-- ===== FOOTER / CONTATO ===== -->
+<footer class="cx-foot" id="contato" data-screen-label="Contato">
+  <div class="cx-foot-inner">
+    <span class="cx-eyebrow eyebrow-inv"><span class="dash"></span>Contato</span>
+    <h2>Quer melhorar seu produto<span class="dot">?</span></h2>
+    <div class="cx-foot-status"><span class="pill"><span class="pdot"></span><span class="br">[</span>Aberto para oportunidades<span class="br">]</span></span></div>
+    <div class="cx-foot-cta">
+      <a class="cx-btn invert-light" href="/cdn-cgi/l/email-protection#e2818a908b91968b838c92838b9483d3d3a2858f838b8ecc818d8f">Vamos conversar <i data-lucide="arrow-up-right"></i></a>
+      <a class="cx-btn glass" href="https://www.linkedin.com/in/christiantpaiva/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="cx-btn link-light" href="assets/christian-paiva-cv.pdf" target="_blank" rel="noopener">Currículo <i data-lucide="arrow-down-to-line"></i></a>
+    </div>
+    <div class="cx-foot-div"></div>
+    <div class="cx-foot-row">
+      <div class="links">
+        <a href="/cdn-cgi/l/email-protection#7a19120813090e131b140a1b130c1b4b4b3a1d171b131654191517"><i data-lucide="mail" style="width:14px;height:14px"></i><span class="__cf_email__" data-cfemail="45262d372c36312c242b35242c33247474052228242c296b262a28">[email&#160;protected]</span></a>
+        <a href="https://www.linkedin.com/in/christiantpaiva/" target="_blank" rel="noopener"><i data-lucide="linkedin" style="width:14px;height:14px"></i>LinkedIn</a>
+      </div>
+      <div>© 2026 Christian Paiva · <span id="cx-date" style="opacity:0.7">—</span></div>
+    </div>
+  </div>
+  <div class="cx-foot-bigname" aria-hidden="true">Christian Paiva</div>
+</footer>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="cx-lb" id="cx-lb">
+  <div class="meta" id="cx-lb-meta"></div>
+  <button class="close" id="cx-lb-close" aria-label="Fechar">✕</button>
+  <img id="cx-lb-img" alt="" />
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  function drawIcons(){ window.lucide && window.lucide.createIcons(); }
+  drawIcons(); [60,300,800].forEach(t=>setTimeout(drawIcons,t));
+
+  (function(){
+    var d=new Date();
+    var wd=['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado'][d.getDay()];
+    var p=function(n){return String(n).padStart(2,'0');};
+    var el=document.getElementById('cx-date');
+    if(el) el.textContent = wd+', '+p(d.getDate())+'/'+p(d.getMonth()+1)+'/'+d.getFullYear();
+  })();
+
+  (function(){
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    setTimeout(function(){
+      document.documentElement.classList.add('cx-animate');
+      var els = Array.prototype.slice.call(document.querySelectorAll('.cx-reveal'));
+      var pass = function(){
+        var h = window.innerHeight;
+        els.forEach(function(el){
+          if (el.classList.contains('in')) return;
+          var r = el.getBoundingClientRect();
+          if (r.top < h*0.92 && r.bottom > 0) el.classList.add('in');
+        });
+      };
+      [0,200,600].forEach(function(t){ setTimeout(pass,t); });
+      window.addEventListener('scroll', pass, {passive:true});
+      window.addEventListener('resize', pass);
+    }, 60);
+  })();
+
+  (function(){
+    var lb=document.getElementById('cx-lb'), img=document.getElementById('cx-lb-img'), meta=document.getElementById('cx-lb-meta');
+    function open(src,label){ img.src=src; meta.textContent=label||''; lb.classList.add('on'); document.body.style.overflow='hidden'; }
+    function close(){ lb.classList.remove('on'); document.body.style.overflow=''; img.src=''; }
+    document.querySelectorAll('.cx-figure').forEach(function(fig){
+      fig.addEventListener('click', function(){ open(fig.getAttribute('data-full'), fig.getAttribute('data-label')); });
+    });
+    document.getElementById('cx-lb-close').addEventListener('click', function(e){ e.stopPropagation(); close(); });
+    lb.addEventListener('click', close);
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+  })();
+</script>
+</body>
+</html>
