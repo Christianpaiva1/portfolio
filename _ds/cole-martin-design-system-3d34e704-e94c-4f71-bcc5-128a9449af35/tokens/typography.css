@@ -1,0 +1,79 @@
+/* ============================================================
+   TYPOGRAPHY — Cole Martin Design System
+   Space Grotesk for oversized editorial display.
+   Space Mono for technical labels, body, and metadata.
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-mono:    "Space Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* ---- Weights ---- */
+  --fw-regular:  400; /* @kind font */
+  --fw-medium:   500; /* @kind font */
+  --fw-semibold: 600; /* @kind font */
+  --fw-bold:     700; /* @kind font */
+
+  /* ============================================================
+     TYPE SCALE
+     Display = Space Grotesk, tight tracking, UPPERCASE.
+     Steps down keep the editorial proportions; mono stays small.
+     ============================================================ */
+
+  /* Display — hero numerals & statements */
+  --type-display-size:    140px;
+  --type-display-line:    0.92;
+  --type-display-track:   -0.05em;
+  --type-display-weight:  var(--fw-semibold);
+
+  /* Headline — section titles */
+  --type-h1-size:   64px;
+  --type-h1-line:   1.0;
+  --type-h1-track:  -0.04em;
+
+  --type-h2-size:   40px;
+  --type-h2-line:   1.05;
+  --type-h2-track:  -0.03em;
+
+  --type-h3-size:   24px;
+  --type-h3-line:   1.15;
+  --type-h3-track:  -0.02em;
+
+  /* Mono body & labels */
+  --type-body-size:    14px;
+  --type-body-line:    20px;
+  --type-body-track:   0.01em;
+
+  --type-mono-size:    12px;
+  --type-mono-line:    16px;
+  --type-mono-track:   0.025em;
+
+  --type-label-size:   12px;
+  --type-label-line:   16px;
+  --type-label-track:  0.08em;   /* labels are widely tracked + uppercase */
+}
+
+/* ---- Optional ready-made text roles ---- */
+.cm-display {
+  font-family: var(--font-display);
+  font-size: var(--type-display-size);
+  line-height: var(--type-display-line);
+  letter-spacing: var(--type-display-track);
+  font-weight: var(--type-display-weight);
+  text-transform: uppercase;
+}
+.cm-h1 { font-family: var(--font-display); font-size: var(--type-h1-size); line-height: var(--type-h1-line); letter-spacing: var(--type-h1-track); font-weight: var(--fw-semibold); }
+.cm-h2 { font-family: var(--font-display); font-size: var(--type-h2-size); line-height: var(--type-h2-line); letter-spacing: var(--type-h2-track); font-weight: var(--fw-semibold); }
+.cm-h3 { font-family: var(--font-display); font-size: var(--type-h3-size); line-height: var(--type-h3-line); letter-spacing: var(--type-h3-track); font-weight: var(--fw-medium); }
+
+.cm-body  { font-family: var(--font-mono); font-size: var(--type-body-size); line-height: var(--type-body-line); letter-spacing: var(--type-body-track); }
+.cm-mono  { font-family: var(--font-mono); font-size: var(--type-mono-size); line-height: var(--type-mono-line); letter-spacing: var(--type-mono-track); }
+.cm-label {
+  font-family: var(--font-mono);
+  font-size: var(--type-label-size);
+  line-height: var(--type-label-line);
+  letter-spacing: var(--type-label-track);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+}

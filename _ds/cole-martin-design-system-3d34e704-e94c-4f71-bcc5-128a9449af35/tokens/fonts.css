@@ -1,0 +1,11 @@
+/* ============================================================
+   Webfonts — Cole Martin Design System
+   Display:  Space Grotesk (editorial, oversized, uppercase)
+   Mono:     Space Mono (technical labels, body, metadata)
+   Both are Google Fonts. Shipped here via CDN @import so any
+   consumer linking styles.css picks them up. If you need fully
+   offline binaries, drop the .woff2 files in /assets/fonts and
+   replace these @imports with local @font-face rules.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");

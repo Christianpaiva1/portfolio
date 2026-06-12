@@ -1,0 +1,19 @@
+/* ============================================================
+   FONTS — Digital Experiences
+   Primary typeface: Inter (display, body, utility).
+   Loaded from the Google Fonts CDN. If you need a fully
+   offline bundle, swap these @font-face src URLs for local
+   woff2 binaries.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Explicit faces so the system declares its own webfonts.
+   (Mirrors the Google CDN above; harmless if the @import wins.) */
+@font-face {
+  font-family: 'Inter Fallback';
+  font-style: normal;
+  font-weight: 300 800;
+  font-display: swap;
+  src: local('Inter'), local('Inter-Regular');
+}

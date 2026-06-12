@@ -1,0 +1,49 @@
+/* ============================================================
+   ELEVATION & DEPTH — Cole Martin Design System
+   Material reads as GLASS first. Borders, shadows and blur
+   only reinforce that choice. Keep recipes consistent.
+   ============================================================ */
+
+:root {
+  /* ---- Shadows ---- */
+  --shadow-none: 0 0 0 0 rgba(0,0,0,0);
+  --shadow-sm:   0 1px 2px 0 rgba(0,0,0,0.05);
+  --shadow-inset:inset 0 0 0 1px rgba(0,0,0,0.05);
+  --shadow-soft: 0 8px 30px 0 rgba(0,0,0,0.04);
+  --shadow-lift: 0 18px 50px -12px rgba(26,26,26,0.18);
+
+  /* ---- Blur ---- */
+  --blur-glass: 12px;
+
+  /* ---- Glass surface recipe ---- */
+  --glass-bg:     rgba(255, 255, 255, 0.55);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.6); /* @kind other */
+  --glass-shadow: var(--shadow-soft);
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+  --ease-soft:     ease; /* @kind other */
+  --dur-fast:   120ms; /* @kind other */
+  --dur-base:   150ms; /* @kind other */
+  --dur-slow:   240ms; /* @kind other */
+}
+
+/* Reusable glass surface utility */
+.cm-glass {
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+}
+
+/* Signature gradient border shell — wrap a surface to get a
+   hairline premium frame. Inner surface insets slightly. */
+.cm-shell {
+  padding: 1px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-shell);
+}
+.cm-shell > * {
+  border-radius: calc(var(--radius-full) - 1px);
+}

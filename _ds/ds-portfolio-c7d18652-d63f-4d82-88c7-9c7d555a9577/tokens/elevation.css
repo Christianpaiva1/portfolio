@@ -1,0 +1,53 @@
+/* ============================================================
+   ELEVATION & DEPTH — Digital Experiences
+   Glass first. Borders, inset highlights, blur and signal glow
+   reinforce the material — never replace it with a flat drop
+   shadow. Recipes are shared verbatim across hero panels,
+   cards, and controls.
+   ============================================================ */
+
+:root {
+  /* ---- Blur (backdrop) ------------------------------------- */
+  --blur-sm: 12px;
+  --blur-md: 24px;   /* standard glass card */
+  --blur-lg: 40px;   /* hero panel */
+
+  /* ---- Inset highlight shadows (top hairline of light) ----- */
+  --shadow-inset-soft:
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(255, 255, 255, 0.06) 0px 1px 0px 0px inset;
+
+  --shadow-inset-strong:
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(255, 255, 255, 0.10) 0px 1px 0px 0px inset;
+
+  /* ---- Signal glow (magenta focus / active edge) ----------- */
+  --shadow-signal-glow: rgba(217, 70, 239, 0.40) 0px 0px 10px 0px;
+  --shadow-violet-glow: rgba(139, 92, 246, 0.35) 0px 0px 24px 0px;
+
+  /* ---- Standard card stack (glass + inset) ----------------- */
+  --shadow-card:
+    rgba(0, 0, 0, 0.45) 0px 24px 60px -24px,
+    rgba(255, 255, 255, 0.06) 0px 1px 0px 0px inset;
+
+  /* ---- Border weights -------------------------------------- */
+  --border-1: 1px;
+  --border-2: 2px;
+
+  /* ---- Gradient border shell ------------------------------- */
+  /* Premium hairline frame: paint the fill, then a 145deg
+     violet→transparent gradient on the border-box. Apply with
+     border: 1px solid transparent + the two-layer background. */
+  --shell-bg:
+    linear-gradient(var(--ink-850), var(--ink-850)) padding-box,
+    linear-gradient(145deg,
+      rgba(168, 85, 247, 0.35) 0%,
+      rgba(255, 255, 255, 0.08) 42%,
+      rgba(255, 255, 255, 0) 100%) border-box;
+
+  /* ---- Divider / sheen gradients --------------------------- */
+  --sheen-horizontal: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.20) 50%, transparent 100%); /* @kind other */
+  --sheen-violet: linear-gradient(90deg, transparent 0%, var(--violet-300) 50%, transparent 100%); /* @kind other */
+}

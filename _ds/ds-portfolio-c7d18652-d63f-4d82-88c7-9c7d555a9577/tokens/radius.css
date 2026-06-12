@@ -1,0 +1,15 @@
+/* ============================================================
+   RADIUS — Digital Experiences
+   Tight, controlled radius family. Large surfaces open up to
+   32–40px; controls and badges stay pill (9999px) or share the
+   card DNA. No sharp/square exceptions.
+   ============================================================ */
+
+:root {
+  --radius-sm: 16px;   /* small surfaces, inputs */
+  --radius-md: 24px;   /* nested panels */
+  --radius-lg: 28px;   /* gradient shell / standard card */
+  --radius-xl: 32px;   /* primary card surface */
+  --radius-2xl: 40px;  /* hero panels */
+  --radius-full: 9999px; /* buttons, badges, avatars */
+}

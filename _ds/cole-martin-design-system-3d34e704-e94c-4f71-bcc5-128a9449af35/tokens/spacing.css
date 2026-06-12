@@ -1,0 +1,43 @@
+/* ============================================================
+   SPACING & SHAPE — Cole Martin Design System
+   4px base rhythm. Every gap steps from that cadence.
+   ============================================================ */
+
+:root {
+  /* ---- Spacing scale (4px base) ---- */
+  --space-base: 4px;
+  --space-1:  4px;
+  --space-2:  6px;
+  --space-3:  8px;
+  --space-4:  12px;
+  --space-5:  14px;
+  --space-6:  16px;
+  --space-7:  20px;
+  --space-8:  24px;
+
+  /* ---- Section & card padding ---- */
+  --pad-section-sm: 32px;
+  --pad-section-md: 48px;
+  --pad-section-lg: 144px;
+  --pad-card:       16px;
+  --pad-card-lg:    32px;
+
+  /* ---- Gaps ---- */
+  --gap-1: 4px;
+  --gap-2: 8px;
+  --gap-3: 12px;
+  --gap-4: 16px;
+
+  /* ============================================================
+     RADII
+     Controlled family + two signature organic blob silhouettes
+     used on accent cards.
+     ============================================================ */
+  --radius-sm:   12px;
+  --radius-lg:   32px;
+  --radius-full: 9999px;
+
+  /* Organic blob radii (the signature card shapes) */
+  --radius-blob-1: 70% 30% 60% 40% / 50% 60% 40% 50%;
+  --radius-blob-2: 30px 10px 30px 30px;
+}

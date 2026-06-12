@@ -1,0 +1,90 @@
+/* ============================================================
+   COLORS — Digital Experiences
+   Dark studio surface, violet accent, glass material.
+   Base palette first, then semantic aliases. Reference the
+   semantic tokens in product code; reach for base tokens only
+   when composing a new semantic role.
+   ============================================================ */
+
+:root {
+  /* ---- Base: ink / neutral foundation ---------------------- */
+  --ink-900: #050505;   /* deepest background well */
+  --ink-850: #0B0B0D;   /* neutral foundation (spec neutral/surface) */
+  --ink-800: #120B1C;   /* violet-tinted background top */
+  --ink-700: #16161A;   /* raised chrome */
+  --ink-600: #1E1E24;   /* hairline-lifted surface */
+
+  /* ---- Base: violet / accent family ------------------------ */
+  --violet-300: #C4B5FD;
+  --violet-400: #A78BFA; /* tertiary */
+  --violet-500: #8B5CF6; /* PRIMARY accent */
+  --violet-600: #7C3AED;
+  --violet-700: #6D28D9;
+
+  /* ---- Base: blue (secondary) ------------------------------ */
+  --blue-300: #93C5FD;
+  --blue-400: #60A5FA;   /* secondary border */
+  --blue-500: #3B82F6;   /* SECONDARY accent */
+
+  /* ---- Base: magenta (edge / glow) ------------------------- */
+  --magenta-400: #E879F9;
+  --magenta-500: #D946EF; /* signal border + glow */
+
+  /* ---- Base: signal / WebGL grid --------------------------- */
+  --grid-green: #1FE0A0; /* retro-futurist perspective grid */
+
+  /* ---- Base: text ------------------------------------------ */
+  --white: #FFFFFF;
+  --slate-400: #94A3B8;  /* text secondary */
+  --slate-500: #64748B;  /* link / muted */
+  --slate-600: #475569;  /* disabled */
+
+  /* ---- Base: glass alpha layers ---------------------------- */
+  --glass-fill: rgba(255, 255, 255, 0.035);
+  --glass-fill-strong: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.10);
+  --glass-border-soft: rgba(255, 255, 255, 0.06);
+  --glass-border-violet: rgba(168, 85, 247, 0.35);
+  --inset-highlight: rgba(255, 255, 255, 0.06);
+  --inset-highlight-strong: rgba(255, 255, 255, 0.10);
+
+  /* ============================================================
+     SEMANTIC ALIASES — use these in product code
+     ============================================================ */
+
+  /* Backgrounds & surfaces */
+  --bg-base: var(--ink-850);
+  --bg-deep: var(--ink-900);
+  --surface-card: var(--glass-fill);
+  --surface-card-strong: var(--glass-fill-strong);
+  --surface-raised: var(--ink-700);
+
+  /* Page background gradient (violet-tinted well) */
+  --bg-gradient: radial-gradient(120% 120% at 50% 0%, var(--ink-800) 0%, var(--ink-900) 60%);
+
+  /* Accents */
+  --accent: var(--violet-500);
+  --accent-strong: var(--violet-600);
+  --accent-soft: var(--violet-400);
+  --accent-secondary: var(--blue-500);
+  --accent-signal: var(--magenta-500);
+
+  /* Text */
+  --text-primary: var(--white);
+  --text-secondary: var(--slate-400);
+  --text-muted: var(--slate-500);
+  --text-disabled: var(--slate-600);
+  --text-link: var(--slate-500);
+  --text-accent: var(--violet-400);
+
+  /* Borders */
+  --border-hairline: var(--glass-border);
+  --border-soft: var(--glass-border-soft);
+  --border-violet: var(--glass-border-violet);
+  --border-blue: rgba(96, 165, 250, 0.5);
+  --border-signal: var(--magenta-500);
+
+  /* Glow */
+  --glow-signal: rgba(217, 70, 239, 0.40);
+  --glow-violet: rgba(139, 92, 246, 0.35);
+}

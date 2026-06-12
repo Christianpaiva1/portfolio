@@ -1,0 +1,65 @@
+/* ============================================================
+   COLORS — Cole Martin Design System
+   A light, glassy palette built on an off-white canvas with
+   three pastel accents (lavender / amber / sage) and a deep
+   near-black for high-contrast inversions.
+   ============================================================ */
+
+:root {
+  /* ---- Brand accents ---- */
+  --cm-lavender: #A79CFF;   /* primary  — emphasis, action, links */
+  --cm-amber:    #F4B942;   /* secondary — supporting accent, cards */
+  --cm-sage:     #88C999;   /* tertiary  — reserved contrast moments */
+
+  /* Accent tints (for glass washes / gradient stops) */
+  --cm-lavender-20: rgba(167, 156, 255, 0.20);
+  --cm-amber-20:    rgba(244, 185, 66, 0.20);
+  --cm-sage-20:     rgba(136, 201, 153, 0.20);
+
+  /* ---- Neutrals ---- */
+  --cm-ink:      #1A1A1A;   /* neutral foundation — text, chrome */
+  --cm-ink-soft: #1F2937;   /* secondary text */
+  --cm-black:    #000000;   /* inversion background */
+  --cm-white:    #FFFFFF;   /* surface */
+  --cm-paper:    #F9F8F5;   /* warm off-white canvas / glass base */
+
+  /* Border greys (low → high contrast) */
+  --cm-border-1: #F3F4F6;
+  --cm-border-2: #E5E7EB;
+  --cm-border-3: #D1D5DB;
+
+  /* ============================================================
+     SEMANTIC ALIASES — reference these in components
+     ============================================================ */
+  --color-bg:            var(--cm-paper);
+  --color-bg-invert:     var(--cm-black);
+  --color-surface:       var(--cm-white);
+  --color-surface-glass: rgba(255, 255, 255, 0.55);
+
+  --color-text:          var(--cm-ink);
+  --color-text-secondary:var(--cm-ink-soft);
+  --color-text-invert:   var(--cm-white);
+  --color-text-muted:    #6B7280;
+
+  --color-primary:       var(--cm-lavender);
+  --color-secondary:     var(--cm-amber);
+  --color-tertiary:      var(--cm-sage);
+  --color-accent:        var(--cm-lavender);
+
+  --color-border:        var(--cm-border-1);
+  --color-border-strong: var(--cm-border-2);
+
+  /* Signature gradient — used on border shells & glass washes */
+  --gradient-shell: linear-gradient(
+    to right top,
+    rgba(167, 156, 255, 0.20),
+    rgb(249, 248, 245),
+    rgba(244, 185, 66, 0.20)
+  ); /* @kind other */
+  --gradient-wash: linear-gradient(
+    to top right,
+    var(--cm-lavender-20),
+    var(--cm-paper),
+    var(--cm-amber-20)
+  ); /* @kind other */
+}

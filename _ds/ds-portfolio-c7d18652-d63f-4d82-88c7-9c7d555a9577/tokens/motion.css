@@ -1,0 +1,28 @@
+/* ============================================================
+   MOTION — Digital Experiences
+   Expressive but interface-focused. Timing clusters at 550/700ms
+   for layout & text transitions; 150/300ms for micro hover.
+   Hover changes text, stroke, shadow, color — rarely geometry.
+   ============================================================ */
+
+:root {
+  /* ---- Durations ------------------------------------------- */
+  --dur-instant: 150ms;   /* @kind other */
+  --dur-fast: 300ms;      /* @kind other */
+  --dur-base: 500ms;      /* @kind other */
+  --dur-expressive: 550ms;/* @kind other */
+  --dur-slow: 700ms;      /* @kind other */
+  --dur-ambient: 800ms;   /* @kind other */
+
+  /* ---- Easings --------------------------------------------- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);    /* @kind other */
+  --ease-emphasized: cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --ease-out: ease;                                 /* @kind other */
+
+  /* ---- Common transitions ---------------------------------- */
+  --transition-hover: color var(--dur-fast) var(--ease-standard),
+                      border-color var(--dur-fast) var(--ease-standard),
+                      box-shadow var(--dur-expressive) var(--ease-emphasized);
+  --transition-layout: transform var(--dur-slow) var(--ease-emphasized),
+                       opacity var(--dur-expressive) var(--ease-standard);
+}

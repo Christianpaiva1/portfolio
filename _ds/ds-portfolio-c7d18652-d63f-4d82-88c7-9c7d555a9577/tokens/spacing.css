@@ -1,0 +1,39 @@
+/* ============================================================
+   SPACING — Digital Experiences
+   4px base rhythm. Steps grow from that cadence; don't invent
+   off-grid values.
+   ============================================================ */
+
+:root {
+  --space-base: 4px;
+
+  /* Step scale (spec: 4,6,8,10,12,16,20,24) */
+  --space-1: 4px;
+  --space-2: 6px;
+  --space-3: 8px;
+  --space-4: 10px;
+  --space-5: 12px;
+  --space-6: 16px;
+  --space-7: 20px;
+  --space-8: 24px;
+  --space-9: 32px;
+  --space-10: 40px;
+  --space-12: 56px;
+  --space-16: 80px;
+
+  /* Gaps (spec: 2,8,12,14) */
+  --gap-xs: 2px;
+  --gap-sm: 8px;
+  --gap-md: 12px;
+  --gap-lg: 14px;
+
+  /* Section + card padding (spec families) */
+  --pad-card-sm: 9px;
+  --pad-card: 24px;
+  --pad-card-lg: 28px;
+  --pad-card-xl: 32px;
+
+  --pad-section-sm: 24px;
+  --pad-section: 32px;
+  --pad-section-lg: 40px;
+}

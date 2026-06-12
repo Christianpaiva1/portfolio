@@ -1,0 +1,82 @@
+/* ============================================================
+   TYPOGRAPHY — Digital Experiences
+   One family (Inter) across display, body, utility. Display is
+   tight and oversized; body is light (300); labels are small,
+   wide-tracked, uppercase.
+   ============================================================ */
+
+:root {
+  /* ---- Family ---------------------------------------------- */
+  --font-sans: 'Inter', 'Inter Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: var(--font-sans);
+
+  /* ---- Weights --------------------------------------------- */
+  --fw-light: 300;    /* @kind font */
+  --fw-regular: 400;  /* @kind font */
+  --fw-medium: 500;   /* @kind font */
+  --fw-semibold: 600; /* @kind font */
+  --fw-bold: 700;     /* @kind font */
+  --fw-extrabold: 800;/* @kind font */
+
+  /* ---- Display scale --------------------------------------- */
+  --text-display-lg: 160px;   /* hero numerals / single-word statements */
+  --lh-display-lg: 0.95;      /* @kind font */
+  --tracking-display: -0.03em;/* @kind font */
+
+  --text-display-md: 96px;
+  --lh-display-md: 0.98;      /* @kind font */
+
+  --text-display-sm: 56px;
+  --lh-display-sm: 1.02;      /* @kind font */
+
+  /* ---- Headings -------------------------------------------- */
+  --text-h1: 40px;
+  --text-h2: 32px;
+  --text-h3: 24px;
+  --lh-heading: 1.12;          /* @kind font */
+  --tracking-heading: -0.01em;/* @kind font */
+
+  /* ---- Body ------------------------------------------------ */
+  --text-body-lg: 18px;
+  --text-body-md: 16px;       /* spec body-md, weight 300 */
+  --text-body-sm: 14px;
+  --lh-body: 1.5;             /* @kind font */
+  --tracking-body: 0;         /* @kind font */
+
+  /* ---- Label / utility ------------------------------------- */
+  --text-label-md: 12px;      /* spec label-md */
+  --lh-label: 1.33;           /* @kind font */
+  --tracking-label: 0.17em;   /* @kind font */
+  --transform-label: uppercase;/* @kind font */
+}
+
+/* ------------------------------------------------------------
+   Optional helper classes — convenience only. Product code can
+   reference the tokens directly instead.
+   ------------------------------------------------------------ */
+.de-display {
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--text-display-lg);
+  line-height: var(--lh-display-lg);
+  letter-spacing: var(--tracking-display);
+  color: var(--text-primary);
+}
+
+.de-body {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-light);
+  font-size: var(--text-body-md);
+  line-height: var(--lh-body);
+  color: var(--text-secondary);
+}
+
+.de-label {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-label-md);
+  line-height: var(--lh-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: var(--transform-label);
+  color: var(--text-secondary);
+}
