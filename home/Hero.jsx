@@ -1,19 +1,19 @@
 /* Hero — display decorado + retrato com anel giratório, blobs e adornos. */
 const { Button: HBtn, Tag: HTag } = window.ColeMartinDesignSystem_3d34e7;
 
-const StarGlyph = ({ cls }) => (
-  <svg className={cls} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+const StarGlyph = ({ cls }) =>
+<svg className={cls} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M12 1.5c.4 5.2 1.3 9.1 10.5 10.5C13.3 13.4 12.4 17.3 12 22.5c-.4-5.2-1.3-9.1-10.5-10.5C10.7 10.6 11.6 6.7 12 1.5Z" />
-  </svg>
-);
+  </svg>;
 
-const ArrowDR = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 7h10v10M7 17 17 7" /></svg>
-);
 
-const PinIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
-);
+const ArrowDR = () =>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 7h10v10M7 17 17 7" /></svg>;
+
+
+const PinIcon = () =>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>;
+
 
 function Hero({ onNav }) {
   const CP = window.CP;
@@ -48,20 +48,20 @@ function Hero({ onNav }) {
 
           <div className="cp-cta-row reveal" style={{ '--d': '440ms', marginTop: 28 }}>
             <HBtn variant="invert" size="lg"
-              iconRight={<i data-lucide="arrow-up-right" style={{ width: 15, height: 15, strokeWidth: 1.5 }} />}
-              onClick={() => onNav('trabalho')}>
-              Ver trabalho
+            iconRight={<i data-lucide="arrow-up-right" style={{ width: 15, height: 15, strokeWidth: 1.5 }} />}
+            onClick={() => onNav('trabalho')}>
+              Veja meus trabalhos
             </HBtn>
-            <a className="cp-scrollcue" href="#trabalho" onClick={(e) => { e.preventDefault(); onNav('trabalho'); }}>
+            <a className="cp-scrollcue" href="#trabalho" onClick={(e) => {e.preventDefault();onNav('trabalho');}}>
               Role para explorar
               <span className="arr"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14M5 12l7 7 7-7" /></svg></span>
             </a>
           </div>
 
           <div className="cp-hero-tags reveal" style={{ '--d': '520ms' }}>
-            {CP.tags.map((t, i) => (
-              <HTag key={t} variant={['lavender', 'amber', 'sage', 'outline', 'outline'][i % 5]}>{t}</HTag>
-            ))}
+            {CP.tags.map((t, i) =>
+            <HTag key={t} variant={['lavender', 'amber', 'sage', 'outline', 'outline'][i % 5]}>{t}</HTag>
+            )}
           </div>
         </div>
 
@@ -95,8 +95,8 @@ function Hero({ onNav }) {
           </svg>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
 
 window.Hero = Hero;

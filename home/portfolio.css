@@ -9,7 +9,7 @@
   --cp-maxw: 1200px;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: auto; }
 body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
 * { box-sizing: border-box; }
 ::selection { background: var(--cm-lavender-20); }
@@ -140,7 +140,7 @@ body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
 /* entrada por máscara (linha sobe) */
 .cp-animate .cp-title .ln > span {
   transform: translateY(110%);
-  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.72s var(--ease-standard);
   transition-delay: var(--d, 0ms);
 }
 .cp-animate.cp-loaded .cp-title .ln > span { transform: translateY(0); }
@@ -157,7 +157,7 @@ body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
 .cp-orb-a {
   font-family: var(--font-display); font-weight: 600; font-size: 0.56em; line-height: 1;
   color: var(--cm-ink); display: inline-flex; align-items: center; justify-content: center;
-  transform-origin: 50% 54%; animation: cpSpin 7s linear infinite;
+  transform-origin: 50% 54%; animation: cpSpin 13s linear infinite;
 }
 
 .cp-lead {
@@ -190,6 +190,8 @@ body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
   text-decoration: none;
 }
 .cp-scrollcue .arr { display: inline-flex; animation: cpBounce 1.8s var(--ease-standard) infinite; }
+.cp-scrollcue { transition: color var(--dur-base) var(--ease-standard); }
+.cp-scrollcue:hover { color: var(--cm-ink); }
 
 /* tags do hero */
 .cp-hero-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 32px; }
@@ -205,10 +207,10 @@ body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
   box-shadow: var(--shadow-lift);
 }
 .cp-animate .cp-portrait {
-  opacity: 0; transform: scale(0.9);
-  transition: opacity 0.9s var(--ease-standard) 0.25s, transform 0.9s cubic-bezier(0.16,1,0.3,1) 0.25s;
+  opacity: 0; transform: translateY(22px);
+  transition: opacity 0.7s var(--ease-standard) 0.15s, transform 0.7s var(--ease-standard) 0.15s;
 }
-.cp-animate.cp-loaded .cp-portrait { opacity: 1; transform: scale(1); }
+.cp-animate.cp-loaded .cp-portrait { opacity: 1; transform: none; }
 .cp-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; display: block; }
 /* anel hairline */
 .cp-portrait::after {
@@ -222,10 +224,10 @@ body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
   display: grid; place-items: center;
 }
 .cp-animate .cp-ringbadge {
-  opacity: 0; transform: scale(0.6);
-  transition: opacity 0.6s ease 0.5s, transform 0.6s cubic-bezier(0.34,1.56,0.64,1) 0.5s;
+  opacity: 0; transform: translateY(14px) scale(0.96);
+  transition: opacity 0.65s var(--ease-standard) 0.32s, transform 0.65s var(--ease-standard) 0.32s;
 }
-.cp-animate.cp-loaded .cp-ringbadge { opacity: 1; transform: scale(1); }
+.cp-animate.cp-loaded .cp-ringbadge { opacity: 1; transform: none; }
 .cp-ringbadge .disc {
   position: absolute; inset: 0; border-radius: 9999px;
   background: var(--cm-paper); border: 1px solid var(--cm-lavender);
@@ -248,8 +250,8 @@ body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
   letter-spacing: 0.04em; text-transform: uppercase; color: var(--cm-ink);
   box-shadow: var(--shadow-soft);
 }
-.cp-animate .cp-blob { opacity: 0; transition: opacity 0.6s ease; }
-.cp-animate.cp-loaded .cp-blob { opacity: 1; }
+.cp-animate .cp-blob { opacity: 0; transform: translateY(8px); transition: opacity 0.55s ease, transform 0.55s var(--ease-standard); }
+.cp-animate.cp-loaded .cp-blob { opacity: 1; transform: none; }
 .cp-blob svg { width: 14px; height: 14px; }
 .cp-blob.amber {
   background: var(--cm-amber); border-radius: var(--radius-blob-1);
@@ -297,7 +299,7 @@ body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
    TRABALHO / CASES
    ============================================================ */
 .cp-work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-.cp-case { text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+.cp-case { text-decoration: none; color: inherit; display: flex; flex-direction: column; transform-origin: center; transition: transform var(--dur-base) var(--ease-standard), box-shadow var(--dur-base) var(--ease-standard); }
 .cp-case-cover {
   position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius-lg); overflow: hidden;
   border: 1px solid var(--cm-border-2); box-shadow: var(--shadow-soft);
@@ -306,11 +308,22 @@ body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
 .cp-case-cover.lavender { background: var(--gradient-wash); }
 .cp-case-cover.amber { background: linear-gradient(to top right, var(--cm-amber-20), var(--cm-paper), var(--cm-lavender-20)); }
 .cp-case-cover.sage { background: #1E2620; }
-.cp-case-cover img { display: block; transition: transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+.cp-case-cover img { display: block; transition: opacity 0.4s var(--ease-standard); }
 .cp-case-cover.fit-cover img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
 .cp-case-cover.fit-contain img { width: 86%; height: auto; max-height: 86%; object-fit: contain; filter: drop-shadow(0 26px 40px rgba(0,0,0,0.18)); }
-.cp-case:hover .cp-case-cover.fit-cover img { transform: scale(1.04); }
-.cp-case:hover .cp-case-cover.fit-contain img { transform: scale(1.05) translateY(-4px); }
+.cp-case:hover { transform: translateY(-2px); }
+.cp-case .cp-case-cover { transition: box-shadow var(--dur-base) var(--ease-standard); }
+.cp-case:hover .cp-case-cover { box-shadow: 0 10px 24px -8px rgba(26, 26, 26, 0.32); }
+/* CARDS: entrada por opacidade (sem translate) p/ liberar o transform ao hover.
+   transição do transform/sombra = igual aos botões (--dur-base), sem delay. */
+.cp-animate .cp-case.reveal {
+  opacity: 0; transform: none;
+  transition: opacity var(--dur-slow) var(--ease-standard) var(--d, 0ms),
+              transform var(--dur-base) var(--ease-standard),
+              box-shadow var(--dur-base) var(--ease-standard);
+}
+.cp-animate .cp-case.reveal.in { opacity: 1; transform: none; }
+.cp-animate .cp-case.reveal:hover { transform: translateY(-2px); }
 
 .cp-case-num {
   position: absolute; top: 16px; left: 16px; z-index: 2;
@@ -324,7 +337,7 @@ body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
   width: 38px; height: 38px; border-radius: 9999px; background: var(--cm-white);
   display: inline-flex; align-items: center; justify-content: center; color: var(--cm-ink);
   box-shadow: var(--shadow-sm); opacity: 0; transform: translateY(-4px) scale(0.9);
-  transition: opacity 0.3s var(--ease-standard), transform 0.3s var(--ease-standard);
+  transition: opacity 0.45s var(--ease-standard), transform 0.45s var(--ease-standard);
 }
 .cp-case:hover .cp-case-open { opacity: 1; transform: translateY(0) scale(1); }
 .cp-case-open svg { width: 16px; height: 16px; }
@@ -351,7 +364,7 @@ body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
 .cp-skill-row {
   display: grid; grid-template-columns: 28px 1fr auto; gap: 24px; align-items: start;
   padding: 26px 0; border-top: 1px solid var(--cm-border-2);
-  transition: padding-left var(--dur-base) var(--ease-standard);
+  transition: padding-left 0.4s var(--ease-standard);
 }
 .cp-skill-row:last-child { border-bottom: 1px solid var(--cm-border-2); }
 .cp-skill-row:hover { padding-left: 8px; }
@@ -396,14 +409,27 @@ body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
 }
 
 /* ============================================================
+   HOVER SUTIL NOS BOTÕES DO DS (menu, hero, footer)
+   O componente define transition inline (background/color/opacity);
+   reforçamos com !important p/ animar também o lift + sombra.
+   ============================================================ */
+.cp-menu-right button, .cp-cta-row button, .cp-foot-cta button {
+  transition: background var(--dur-base) var(--ease-standard), color var(--dur-base) var(--ease-standard), opacity var(--dur-base) var(--ease-standard), transform var(--dur-base) var(--ease-standard), box-shadow var(--dur-base) var(--ease-standard) !important;
+}
+.cp-menu-right button:hover, .cp-cta-row button:hover, .cp-foot-cta button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -8px rgba(26, 26, 26, 0.32);
+}
+
+/* ============================================================
    KEYFRAMES
    ============================================================ */
 @keyframes cpSpin { to { transform: rotate(360deg); } }
 @keyframes cpSpinSlow { to { transform: rotate(360deg); } }
-@keyframes cpWave { 0%,60%,100% { transform: rotate(0deg); } 10% { transform: rotate(16deg); } 20% { transform: rotate(-8deg); } 30% { transform: rotate(16deg); } 40% { transform: rotate(-4deg); } 50% { transform: rotate(10deg); } }
 @keyframes cpBounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
-@keyframes cpTwinkle { 0%,100% { opacity: 0.45; transform: scale(0.85) rotate(0deg); } 50% { opacity: 1; transform: scale(1.1) rotate(45deg); } }
-@keyframes cpFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+@keyframes cpWave { 0%,60%,100% { transform: rotate(0deg); } 10% { transform: rotate(16deg); } 20% { transform: rotate(-8deg); } 30% { transform: rotate(16deg); } 40% { transform: rotate(-4deg); } 50% { transform: rotate(10deg); } }
+@keyframes cpTwinkle { 0%,100% { opacity: 0.4; } 50% { opacity: 0.9; } }
+@keyframes cpFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 @keyframes cpPop { 0% { opacity: 0; transform: scale(0.6); } 100% { opacity: 1; transform: scale(1); } }
 
 /* ============================================================
@@ -433,13 +459,24 @@ body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
 }
 
 /* ============================================================
-   REDUCED MOTION — mostra estado final
+   REDUCED MOTION
+   Por opção do usuário, as animações do hero tocam sempre — então
+   NÃO suprimimos sob prefers-reduced-motion.
+
+   Rede de segurança: .cp-settled (via JS, ~1.7s após o load) trava o
+   estado final visível mesmo se a transição congelar. Não afeta os
+   giros contínuos (são animation, não transition).
    ============================================================ */
-@media (prefers-reduced-motion: reduce) {
-  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
-  .reveal { opacity: 1; transform: none; }
-  .cp-title .ln > span { transform: none; }
-  .cp-menu { transform: none; }
-  .cp-portrait { opacity: 1; transform: none; }
-  .cp-ringbadge, .cp-blob { opacity: 1; transform: none; }
-}
+.cp-settled .reveal:not(.cp-case),
+.cp-settled .cp-title .ln > span,
+.cp-settled .cp-portrait,
+.cp-settled .cp-ringbadge,
+.cp-settled .cp-blob,
+.cp-settled .cp-menu { transition: none !important; }
+.cp-settled .reveal:not(.cp-case) { opacity: 1 !important; transform: none !important; }
+.cp-settled .cp-case { opacity: 1 !important; }
+.cp-settled .cp-title .ln > span { transform: translateY(0) !important; }
+.cp-settled .cp-portrait { opacity: 1 !important; transform: none !important; }
+.cp-settled .cp-ringbadge,
+.cp-settled .cp-blob { opacity: 1 !important; transform: none !important; }
+.cp-settled .cp-menu { transform: translateY(0) !important; }

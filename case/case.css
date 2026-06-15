@@ -58,9 +58,9 @@ body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
   display: inline-flex; align-items: center; gap: 8px; text-decoration: none; cursor: pointer;
   font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
   background: var(--cm-ink); color: var(--cm-white); border: 1px solid var(--cm-ink); border-radius: 9999px;
-  padding: 10px 16px; transition: background var(--dur-base) var(--ease-standard), color var(--dur-base) var(--ease-standard), transform var(--dur-base) var(--ease-standard);
+  padding: 10px 16px; transition: background var(--dur-base) var(--ease-standard), color var(--dur-base) var(--ease-standard), transform var(--dur-base) var(--ease-standard), box-shadow var(--dur-base) var(--ease-standard);
 }
-.cx-btn:hover { transform: translateY(-1px); }
+.cx-btn:hover { background: #2A2A2A; border-color: #2A2A2A; }
 .cx-btn svg { width: 14px; height: 14px; }
 .cx-btn.ghost { background: transparent; color: var(--cm-ink); }
 .cx-btn.ghost:hover { background: var(--cm-ink); color: var(--cm-white); }
@@ -95,12 +95,11 @@ body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
 .cx-browser .body img { display: block; width: 100%; height: auto; transition: transform 0.6s var(--ease-standard); }
 .cx-browser .body.clip { max-height: 580px; overflow: hidden; }
 
-/* zoom affordance — leve subida, anel suave e zoom gentil na imagem */
-.cx-figure { position: relative; cursor: zoom-in; transition: transform 0.4s var(--ease-standard); }
-.cx-figure:hover { transform: translateY(-4px); }
-.cx-figure .cx-shell { transition: box-shadow 0.3s var(--ease-standard); }
-.cx-figure:hover .cx-shell { box-shadow: var(--shadow-lift), 0 0 0 2px var(--cm-lavender); }
-.cx-figure:hover .body img { transform: scale(1.045); }
+/* hover das imagens = mesmo comportamento dos botões (lift -2px + sombra, --dur-base) */
+.cx-figure { position: relative; cursor: zoom-in; transition: transform var(--dur-base) var(--ease-standard); }
+.cx-figure:hover { transform: translateY(-2px); }
+.cx-figure .cx-shell { transition: box-shadow var(--dur-base) var(--ease-standard); }
+.cx-figure:hover .cx-shell { box-shadow: 0 10px 24px -8px rgba(26, 26, 26, 0.32); }
 
 /* ============================================================
    FEATURE BAND (imagem protagonista sobre wash)
@@ -255,9 +254,13 @@ body { margin: 0; background: var(--color-bg); color: var(--cm-ink); }
 @keyframes cmPulse { 0% { box-shadow: 0 0 0 0 rgba(136,201,153,0.33); } 70% { box-shadow: 0 0 0 6px rgba(136,201,153,0); } 100% { box-shadow: 0 0 0 0 rgba(136,201,153,0); } }
 .cx-foot-cta { display: flex; gap: 12px; flex-wrap: wrap; }
 .cx-foot .cx-btn.invert-light { background: var(--cm-white); color: var(--cm-black); border-color: var(--cm-white); }
+.cx-foot .cx-btn.invert-light:hover { background: var(--cm-paper); border-color: var(--cm-paper); }
 .cx-foot .cx-btn.glass { background: rgba(255,255,255,0.08); color: var(--cm-white); border-color: rgba(255,255,255,0.2); }
+.cx-foot .cx-btn.glass:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.32); }
 .cx-foot .cx-btn.link-light { background: transparent; color: var(--cm-white); border: 0; border-bottom: 1px solid rgba(255,255,255,0.5); border-radius: 0; padding: 10px 2px; }
-.cx-foot .cx-btn.link-light:hover { opacity: 0.6; transform: none; border-bottom-color: var(--cm-white); }
+.cx-foot .cx-btn.link-light:hover { opacity: 0.6; border-bottom-color: var(--cm-white); }
+/* mesma ação do footer da home: lift sutil nos CTAs ao passar o mouse */
+.cx-foot-cta .cx-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -8px rgba(26, 26, 26, 0.32); }
 .cx-foot-div { height: 1px; background: rgba(255,255,255,0.12); margin: 72px 0 22px; }
 .cx-foot-row { position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; padding-bottom: 30px; font-family: var(--font-mono); font-size: 12px; color: rgba(255,255,255,0.55); }
 .cx-foot-row a { color: rgba(255,255,255,0.82); text-decoration: none; display: inline-flex; align-items: center; gap: 7px; transition: color var(--dur-base) var(--ease-standard); }

@@ -15,21 +15,21 @@ function Skills() {
             </p>
 
             <div className="cp-skill-rows">
-              {CP.skills.map((s, i) => (
-                <div className="cp-skill-row reveal" key={s.name} style={{ '--d': (i * 70) + 'ms' }}>
+              {CP.skills.map((s, i) =>
+              <div className="cp-skill-row reveal" key={s.name} style={{ '--d': i * 70 + 'ms' }}>
                   <span className="cp-skill-ic"><i data-lucide={s.icon}></i></span>
                   <span className="cp-skill-name">{s.name}</span>
                   <span className="cp-skill-items">
                     {s.items.map((it) => <span key={it}>{it}</span>)}
                   </span>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
 
 window.Skills = Skills;

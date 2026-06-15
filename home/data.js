@@ -27,7 +27,7 @@ window.CP = {
   nav: [
     ['top', 'Início'],
     ['sobre', 'Sobre'],
-    ['trabalho', 'Trabalho'],
+    ['trabalho', 'Trabalhos'],
     ['skills', 'Skills'],
     ['contato', 'Contato'],
   ],

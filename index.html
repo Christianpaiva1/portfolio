@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Christian Paiva — Designer UX/UI</title>
 
+<script>
+  /* engata o estado escondido ANTES da primeira pintura, para a entrada animar.
+     por opção do usuário, as animações tocam SEMPRE (ignorando “reduzir movimento”). */
+  try { document.documentElement.classList.add('cp-animate'); } catch (e) {}
+</script>
+
 <link rel="stylesheet" href="_ds/cole-martin-design-system-3d34e704-e94c-4f71-bcc5-128a9449af35/styles.css" />
 
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
@@ -36,8 +42,26 @@
     const onNav = (id) => {
       const el = document.getElementById(id);
       if (!el) return;
-      const y = el.getBoundingClientRect().top + window.scrollY - 70;
-      window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+      const startY = window.scrollY;
+      const targetY = Math.max(0, el.getBoundingClientRect().top + startY - 70);
+      const dist = targetY - startY;
+      if (Math.abs(dist) < 2) return;
+
+      // reduzir movimento -> ainda assim anima (opção do usuário)
+      const dur = Math.min(3000, Math.max(1500, Math.abs(dist) * 1.5));
+      const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+      const t0 = performance.now();
+      let raf = 0;
+      const step = (now) => {
+        const p = Math.min(1, (now - t0) / dur);
+        window.scrollTo({ top: startY + dist * ease(p), behavior: 'auto' });
+        if (p < 1) raf = requestAnimationFrame(step);
+      };
+      // cancela se o usuário rolar manualmente
+      const cancel = () => { cancelAnimationFrame(raf); window.removeEventListener('wheel', cancel); window.removeEventListener('touchstart', cancel); };
+      window.addEventListener('wheel', cancel, { passive: true });
+      window.addEventListener('touchstart', cancel, { passive: true });
+      raf = requestAnimationFrame(step);
     };
 
     React.useEffect(() => {
@@ -46,8 +70,16 @@
       draw();
       const ts = [80, 300, 700].map((t) => setTimeout(draw, t));
 
-      // entrada (load) — setTimeout dispara mesmo com a aba em segundo plano
-      const loadT = setTimeout(() => document.documentElement.classList.add('cp-loaded'), 60);
+      // entrada (load) — toca sempre (opção do usuário: ignora “reduzir movimento”)
+      document.documentElement.classList.add('cp-animate');
+      const loadT = setTimeout(() => {
+        document.documentElement.classList.add('cp-loaded');
+      }, 90);
+      // rede de segurança: após a entrada, garante o estado final visível
+      // mesmo que a transição congele (aba em 2º plano / iframe throttled).
+      const settleT = setTimeout(() => {
+        document.documentElement.classList.add('cp-settled');
+      }, 1700);
 
       const reveals = Array.from(document.querySelectorAll('.reveal'));
       const sections = SECTIONS.map((id) => document.getElementById(id)).filter(Boolean);
@@ -74,7 +106,7 @@
       window.addEventListener('resize', onScroll);
 
       return () => {
-        ts.forEach(clearTimeout); initTs.forEach(clearTimeout); clearTimeout(loadT);
+        ts.forEach(clearTimeout); initTs.forEach(clearTimeout); clearTimeout(loadT); clearTimeout(settleT);
         window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll);
       };
     }, []);
