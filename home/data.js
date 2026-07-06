@@ -14,7 +14,7 @@ window.CP = {
     years: '≈ 3 anos de prática',
     email: 'christianpaiva11@gmail.com',
     linkedin: 'https://www.linkedin.com/in/christiantpaiva/',
-    cv: 'assets/christian-paiva-cv.pdf',
+    cv: 'assets/christian-paiva-cv - rj.pdf',
     photo: 'assets/perfil.webp',
     greeting: 'Olá, eu sou',
     ring: 'Pesquisa · Fluxo · Interface · ',
